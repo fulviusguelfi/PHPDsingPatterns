@@ -12,4 +12,12 @@
  * @author fulvi
  */
 class AbstractFactory {
+    var $objects;
+    var $families = (string $name, array $objects) => {
+        return this;
+    };
+    
+    private function buildAll(){
+    return $this.;
+    }
 }

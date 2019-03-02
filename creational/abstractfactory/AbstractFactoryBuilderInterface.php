@@ -3,6 +3,6 @@
  *
  * @author fulvi
  */
-interface AbstractFactoryBuilderInterface {
+interface AbstractFactoryBuilderInterface extends AbstractFactory{
     public static function build();
 }
