@@ -11,8 +11,8 @@
  *
  * @author fulvi
  */
-class FactroryImpl implements FactoryInterface{
-    //put your code here
+class FactroryImpl implements FactoryInterface {
+
     public static function create($clsName) {
         return new $clsName();
     }

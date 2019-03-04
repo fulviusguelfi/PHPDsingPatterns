@@ -11,5 +11,6 @@
  * @author fulvi
  */
 interface FactoryInterface {
+
     public static function create($clsName);
 }
