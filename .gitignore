@@ -1,1 +1,4 @@
 /nbproject/
+/vendor/
+/test.php
+/testXdebug.php
