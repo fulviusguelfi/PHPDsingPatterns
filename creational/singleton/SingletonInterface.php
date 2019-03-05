@@ -1,10 +1,10 @@
 <?php
-require_once './SingletonClass.php';
-
+declare(strict_types=1);
 /**
- *
+ * Basic interface for Singleton.
  * @author fulvi
  */
-interface SingletonInterface extends SingletonClass{
+interface SingletonInterface {
+
     public static function getInstance();
 }
