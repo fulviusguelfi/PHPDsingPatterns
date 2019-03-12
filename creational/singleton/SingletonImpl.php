@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
-require_once './SingletonInterface.php';
+    spl_autoload_extensions(".php");
+    spl_autoload_register();
 
 /**
  * Description of SingletonClass
@@ -18,25 +19,17 @@ class SingletonImpl implements SingletonInterface {
      * @return Singleton A Instância única.
      */
     public static function getInstance() {
-        if (null === $this->instance) {
-            $this->instance = new static();
+        if (null === self::$instance) {
+            self::$instance = new SingletonImpl();
         }
-        return $this->instance;
+        return self::$instance;
     }
-
+    
     /**
      * Destrutor esvasia a variavel de instância
      */
     public function __destruct() {
-        $this->instance = null;
-    }
-
-    /**
-     * Construtor do tipo protegido previne que uma nova instância da
-     * Classe seja criada através do operador `new` de fora dessa classe.
-     */
-    protected function __construct() {
-        return $this->getInstance();
+        self::$instance = null;
     }
 
     /**
